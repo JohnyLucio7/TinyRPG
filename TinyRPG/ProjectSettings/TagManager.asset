@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: References
+    uniqueID: 819086215
+    locked: 0
+  - name: Scenary
+    uniqueID: 2484773537
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
