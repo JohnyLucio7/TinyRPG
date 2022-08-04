@@ -8,14 +8,20 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Animator animator;
 
+    public Transform mainCamera;
+    public Transform rayPoint;
+    public LayerMask rayInteractLayer;
+
     public float speed;
     private bool isWalk;
+    private bool isDoor;
     private bool isAttack;
     private bool isLoockLeft;
 
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = Camera.main.transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -26,6 +32,18 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+
+        Debug.DrawRay(rayPoint.position, new Vector2(h, v) * 0.12f, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(rayPoint.position, new Vector2(h, v), 0.12f, rayInteractLayer);
+
+        if (hit && !isDoor)
+        {
+            isDoor = true;
+            DoorScript tmp = hit.transform.gameObject.GetComponent<DoorScript>();
+            teleport(tmp.exit, tmp.PosCam);
+
+
+        }
 
         if (h != 0 || v != 0) isWalk = true;
         if (h == 0 && v == 0) isWalk = false;
@@ -72,5 +90,12 @@ public class PlayerController : MonoBehaviour
     public void onAttackEnd()
     {
         isAttack = false;
+    }
+
+    void teleport(Transform posPlayer, Transform posCam)
+    {
+        transform.position = posPlayer.position;
+        mainCamera.position = new Vector3(posCam.position.x, posCam.position.y, -10);
+        isDoor = false;
     }
 }
