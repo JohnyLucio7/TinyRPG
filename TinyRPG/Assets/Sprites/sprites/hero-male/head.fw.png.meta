@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 45201fa242af2994fb55c8422437d916
+guid: e46b00bd6b92ab747bdabfc9e4f3e7d5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,112 +102,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MiniMapa0.fw_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 28
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f3467d2ae0e51242ac1465584534dee
-      internalID: -221506947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MiniMapa0.fw_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 28
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f9c0fd220b9c17419e1278d25f316d1
-      internalID: 729116380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MiniMapa0.fw_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 28
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24bd5bb251fd09b418abc3380cf2e8dd
-      internalID: -47649062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MiniMapa0.fw_3
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 28
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acbbcc26119aba0458ab55a74c4081dd
-      internalID: -1769042866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MiniMapa0.fw_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 28
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9ee38e203dac904a9d8ad9667fc604d
-      internalID: -1062675294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -218,12 +113,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      MiniMapa0.fw_0: -221506947
-      MiniMapa0.fw_2: -47649062
-      MiniMapa0.fw_3: -1769042866
-      MiniMapa0.fw_1: 729116380
-      MiniMapa0.fw_4: -1062675294
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -6,4 +6,5 @@ public class DoorScript : MonoBehaviour
 {
     public Transform exit;
     public Transform PosCam;
+    public int idNextRoom;
 }

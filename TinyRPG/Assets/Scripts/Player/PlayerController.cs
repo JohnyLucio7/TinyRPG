@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private MiniMapaScript miniMapa;
     private Rigidbody2D rigidbody;
     private Animator animator;
+
 
     public Transform mainCamera;
     public Transform rayPoint;
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main.transform;
+        miniMapa = FindObjectOfType(typeof(MiniMapaScript)) as MiniMapaScript;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -40,7 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             isDoor = true;
             DoorScript tmp = hit.transform.gameObject.GetComponent<DoorScript>();
-            teleport(tmp.exit, tmp.PosCam);
+            teleport(tmp.exit, tmp.PosCam, tmp.idNextRoom);
 
 
         }
@@ -92,10 +95,11 @@ public class PlayerController : MonoBehaviour
         isAttack = false;
     }
 
-    void teleport(Transform posPlayer, Transform posCam)
+    void teleport(Transform posPlayer, Transform posCam, int idRoom)
     {
         transform.position = posPlayer.position;
         mainCamera.position = new Vector3(posCam.position.x, posCam.position.y, -10);
+        miniMapa.updateMiniMapa(idRoom);
         isDoor = false;
     }
 }
