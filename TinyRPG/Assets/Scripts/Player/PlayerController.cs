@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     private SpriteRenderer spriteRenderer;
     private MiniMapaScript miniMapa;
     private Rigidbody2D rigidbody;
+    private FadeTransition fade;
     private Animator animator;
-
 
     public Transform mainCamera;
     public Transform rayPoint;
     public LayerMask rayInteractLayer;
 
     public float speed;
+    public bool isDoor;
+
     private bool isWalk;
-    private bool isDoor;
     private bool isAttack;
     private bool isLoockLeft;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main.transform;
         miniMapa = FindObjectOfType(typeof(MiniMapaScript)) as MiniMapaScript;
+        fade = FindObjectOfType(typeof(FadeTransition)) as FadeTransition;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -43,9 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             isDoor = true;
             DoorScript tmp = hit.transform.gameObject.GetComponent<DoorScript>();
-            teleport(tmp.exit, tmp.PosCam, tmp.idNextRoom);
-
-
+            fade.startFade(tmp);
         }
 
         if (h != 0 || v != 0) isWalk = true;
@@ -95,7 +102,7 @@ public class PlayerController : MonoBehaviour
         isAttack = false;
     }
 
-    void teleport(Transform posPlayer, Transform posCam, int idRoom)
+    public void teleport(Transform posPlayer, Transform posCam, int idRoom)
     {
         transform.position = posPlayer.position;
         mainCamera.position = new Vector3(posCam.position.x, posCam.position.y, -10);
