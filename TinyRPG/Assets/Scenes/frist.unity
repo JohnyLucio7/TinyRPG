@@ -320,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionController
       objectReference: {fileID: 0}
+    - target: {fileID: 8262496793601963753, guid: 6ab545707b1632a4b9ad45af00015299, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab545707b1632a4b9ad45af00015299, type: 3}
 --- !u!1 &29688111
@@ -6603,7 +6607,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e8513024c91496e4ca918d24b8b58d71, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4296d17ed411cfb44936ad1c74412cf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6716,6 +6720,11 @@ MonoBehaviour:
     m_Bits: 8
   speed: 0.7
   isDoor: 0
+  slashFront: {fileID: 3307168253444668842, guid: 8722a816e8649124e8756bf5a01aa618, type: 3}
+  slashBack: {fileID: 2337672775187360921, guid: 8964792cd2467c4459e1075b5926ff34, type: 3}
+  slashSideR: {fileID: 5198864051897852734, guid: ce757c84b5ccc8d4296624eed447ce33, type: 3}
+  slashSideL: {fileID: 7216642521005719919, guid: 0484772ff26ccd44da7d95975db96b5f, type: 3}
+  idDirection: 0
 --- !u!1 &1374657054
 GameObject:
   m_ObjectHideFlags: 0

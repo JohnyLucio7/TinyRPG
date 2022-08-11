@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public bool isDoor;
 
+    public GameObject slashFront, slashBack, slashSideR, slashSideL;
+    public int idDirection; // 0 - Front, 1 - Back, 2 - Side
+
     private bool isWalk;
     private bool isAttack;
     private bool isLoockLeft;
@@ -62,17 +65,20 @@ public class PlayerController : MonoBehaviour
 
         if (v > 0) // movimento para cima
         {
+            idDirection = 1;
             animator.SetLayerWeight(1, 1);
             animator.SetLayerWeight(2, 0);
         }
         else if (v < 0) // movimento para baixo
         {
+            idDirection = 0;
             animator.SetLayerWeight(1, 0);
             animator.SetLayerWeight(2, 0);
         }
 
-        if (v == 0 && h != 0)
+        if (v == 0 && h != 0) // movimento para o lado
         {
+            idDirection = 2;
             animator.SetLayerWeight(2, 1);
 
             if (h > 0 && isLoockLeft) flip();
@@ -95,6 +101,29 @@ public class PlayerController : MonoBehaviour
     {
         isLoockLeft = !isLoockLeft;
         spriteRenderer.flipX = isLoockLeft;
+    }
+
+    public void slash()
+    {
+        GameObject slashPrefab = null;
+
+        switch (idDirection)
+        {
+            case 0:
+                slashPrefab = slashFront;
+                break;
+            case 1:
+                slashPrefab = slashBack;
+                break;
+            case 2:
+                slashPrefab = isLoockLeft ? slashSideL : slashSideR;
+                break;
+            default:
+                break;
+        }
+
+        GameObject tmpSlash = Instantiate(slashPrefab, transform.position, transform.localRotation);
+        Destroy(tmpSlash, 0.5f);
     }
 
     public void onAttackEnd()
