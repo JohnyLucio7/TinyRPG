@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private MiniMapaScript miniMapa;
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     private FadeTransition fade;
     private Animator animator;
 
