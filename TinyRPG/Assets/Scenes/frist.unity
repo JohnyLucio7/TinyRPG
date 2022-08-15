@@ -577,6 +577,7 @@ MonoBehaviour:
   PosCam: {fileID: 812920703}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites:
   - {fileID: -1551842154, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: -1818956794, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
@@ -1478,6 +1479,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!1 &230707732
 GameObject:
@@ -2409,6 +2411,7 @@ MonoBehaviour:
   PosCam: {fileID: 46519264}
   idNextRoom: 1
   isLoked: 0
+  openWithKey: 0
   doorsSprites:
   - {fileID: 1904755170, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: 1311909295, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
@@ -2541,6 +2544,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &496964446
 BoxCollider2D:
@@ -3036,6 +3040,7 @@ MonoBehaviour:
   PosCam: {fileID: 1958194232}
   idNextRoom: 2
   isLoked: 0
+  openWithKey: 0
   doorsSprites:
   - {fileID: 1699511363, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: 387939719, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
@@ -3490,6 +3495,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &582720230
 BoxCollider2D:
@@ -4071,6 +4077,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &753313587
 BoxCollider2D:
@@ -4363,6 +4370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 812920703}
+  - component: {fileID: 812920704}
   m_Layer: 0
   m_Name: RoomA
   m_TagString: Untagged
@@ -4386,6 +4394,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812920704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812920702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a748f339be8b41342a6b254ff1c96079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 2124493240}
+  enemies: []
 --- !u!1 &812952153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,6 +4712,7 @@ MonoBehaviour:
   PosCam: {fileID: 46519264}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &884125237
 BoxCollider2D:
@@ -5097,6 +5120,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!1 &997339488
 GameObject:
@@ -5521,6 +5545,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &1101329522
 BoxCollider2D:
@@ -5806,6 +5831,7 @@ MonoBehaviour:
   PosCam: {fileID: 1290479211}
   idNextRoom: 3
   isLoked: 0
+  openWithKey: 0
   doorsSprites:
   - {fileID: -1324436540, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: -267874371, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
@@ -6755,7 +6781,7 @@ MonoBehaviour:
   slashSideR: {fileID: 5198864051897852734, guid: ce757c84b5ccc8d4296624eed447ce33, type: 3}
   slashSideL: {fileID: 7216642521005719919, guid: 0484772ff26ccd44da7d95975db96b5f, type: 3}
   idDirection: 0
-  keys: 0
+  keys: 1
 --- !u!1 &1374657054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8292,6 +8318,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!1 &1738833156
 GameObject:
@@ -8470,6 +8497,9 @@ MonoBehaviour:
   waitMin: 0
   speed: 0.2
   radiusVision: 0.8
+  explosionPrefab: {fileID: 382055926934928284, guid: d768fd6f30a699f439eb4d21b0164aa7, type: 3}
+  doorOpenWhenEnemiesDeath: {fileID: 812920704}
+  killToOpenDoor: 1
 --- !u!1 &1764963974
 GameObject:
   m_ObjectHideFlags: 0
@@ -8521,6 +8551,7 @@ MonoBehaviour:
   PosCam: {fileID: 812920703}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &1764963977
 BoxCollider2D:
@@ -9470,6 +9501,7 @@ MonoBehaviour:
   PosCam: {fileID: 1958194232}
   idNextRoom: 2
   isLoked: 0
+  openWithKey: 0
   doorsSprites:
   - {fileID: -1551842154, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: -1799675671, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
@@ -10165,6 +10197,7 @@ MonoBehaviour:
   PosCam: {fileID: 0}
   idNextRoom: 0
   isLoked: 0
+  openWithKey: 0
   doorsSprites: []
 --- !u!61 &2121651839
 BoxCollider2D:
@@ -10373,6 +10406,7 @@ MonoBehaviour:
   PosCam: {fileID: 46519264}
   idNextRoom: 1
   isLoked: 1
+  openWithKey: 0
   doorsSprites:
   - {fileID: -1324436540, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
   - {fileID: -267874371, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}

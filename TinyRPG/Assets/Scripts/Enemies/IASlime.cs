@@ -7,6 +7,8 @@ public class IASlime : MonoBehaviour
     private new Rigidbody2D rigidbody;
     private bool isLockPlayer;
 
+
+
     public Vector2 moveDirection;
 
     public LayerMask whatIsPlayer;
@@ -18,11 +20,18 @@ public class IASlime : MonoBehaviour
     [Range(0.01f, 1f)] public float speed;
     [Range(0.01f, 1f)] public float radiusVision;
 
+    public GameObject explosionPrefab;
+    public DoorOpenWhenEnemiesDeath doorOpenWhenEnemiesDeath;
+
+    public bool killToOpenDoor;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         StartCoroutine("moveSlime");
+
+        if (killToOpenDoor && doorOpenWhenEnemiesDeath != null) doorOpenWhenEnemiesDeath.enemies.Add(this.gameObject);
     }
 
     // Update is called once per frame
@@ -36,6 +45,21 @@ public class IASlime : MonoBehaviour
     private void FixedUpdate()
     {
         isLockPlayer = Physics2D.OverlapCircle(transform.position, radiusVision, whatIsPlayer);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "slash":
+                GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.localRotation);
+                if (killToOpenDoor && doorOpenWhenEnemiesDeath != null) doorOpenWhenEnemiesDeath.removeEnemy(this.gameObject);
+                Destroy(explosion, 0.7f);
+                Destroy(this.gameObject);
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator moveSlime()

@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             DoorScript tmp = hit.transform.gameObject.GetComponent<DoorScript>();
 
-            if (tmp.isLoked)
+            if (tmp.isLoked && tmp.openWithKey)
             {
                 if (keys > 0)
                 {
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
                     tmp.openDoor();
                 }
             }
-            else
+            else if (!tmp.isLoked)
             {
                 isDoor = true;
                 fade.startFade(tmp);

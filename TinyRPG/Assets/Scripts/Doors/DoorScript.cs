@@ -8,6 +8,7 @@ public class DoorScript : MonoBehaviour
     public Transform PosCam;
     public int idNextRoom;
     public bool isLoked;
+    public bool openWithKey;
     public Sprite[] doorsSprites;
 
     private SpriteRenderer spriteRenderer;
