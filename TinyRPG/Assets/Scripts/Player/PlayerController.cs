@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public GameObject slashFront, slashBack, slashSideR, slashSideL;
     public int idDirection; // 0 - Front, 1 - Back, 2 - Side
 
+    public int keys;
+
     private bool isWalk;
     private bool isAttack;
     private bool isLoockLeft;
@@ -48,14 +50,29 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
+        // Verificando colisão com a porta
+
         Debug.DrawRay(rayPoint.position, new Vector2(h, v) * 0.12f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(rayPoint.position, new Vector2(h, v), 0.12f, rayInteractLayer);
 
         if (hit && !isDoor)
         {
-            isDoor = true;
             DoorScript tmp = hit.transform.gameObject.GetComponent<DoorScript>();
-            fade.startFade(tmp);
+
+            if (tmp.isLoked)
+            {
+                if (keys > 0)
+                {
+                    keys--;
+                    tmp.openDoor();
+                }
+            }
+            else
+            {
+                isDoor = true;
+                fade.startFade(tmp);
+            }
+
         }
 
         if (h != 0 || v != 0) isWalk = true;

@@ -576,6 +576,10 @@ MonoBehaviour:
   exit: {fileID: 2107270846}
   PosCam: {fileID: 812920703}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites:
+  - {fileID: -1551842154, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: -1818956794, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
 --- !u!61 &50890610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1473,6 +1477,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!1 &230707732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2408,10 @@ MonoBehaviour:
   exit: {fileID: 56516598}
   PosCam: {fileID: 46519264}
   idNextRoom: 1
+  isLoked: 0
+  doorsSprites:
+  - {fileID: 1904755170, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: 1311909295, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
 --- !u!61 &486059224
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2530,6 +2540,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &496964446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3023,6 +3035,10 @@ MonoBehaviour:
   exit: {fileID: 1635488448}
   PosCam: {fileID: 1958194232}
   idNextRoom: 2
+  isLoked: 0
+  doorsSprites:
+  - {fileID: 1699511363, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: 387939719, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
 --- !u!61 &554449987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3473,6 +3489,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &582720230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4052,6 +4070,8 @@ MonoBehaviour:
   exit: {fileID: 1225158785}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &753313587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4669,6 +4689,8 @@ MonoBehaviour:
   exit: {fileID: 1854199958}
   PosCam: {fileID: 46519264}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &884125237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5074,6 +5096,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!1 &997339488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5496,6 +5520,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &1101329522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5779,6 +5805,10 @@ MonoBehaviour:
   exit: {fileID: 574445835}
   PosCam: {fileID: 1290479211}
   idNextRoom: 3
+  isLoked: 0
+  doorsSprites:
+  - {fileID: -1324436540, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: -267874371, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
 --- !u!61 &1146930865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6725,6 +6755,7 @@ MonoBehaviour:
   slashSideR: {fileID: 5198864051897852734, guid: ce757c84b5ccc8d4296624eed447ce33, type: 3}
   slashSideL: {fileID: 7216642521005719919, guid: 0484772ff26ccd44da7d95975db96b5f, type: 3}
   idDirection: 0
+  keys: 0
 --- !u!1 &1374657054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,6 +8291,8 @@ MonoBehaviour:
   exit: {fileID: 0}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!1 &1738833156
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,6 +8520,8 @@ MonoBehaviour:
   exit: {fileID: 812952154}
   PosCam: {fileID: 812920703}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &1764963977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9434,6 +9469,10 @@ MonoBehaviour:
   exit: {fileID: 1427578894}
   PosCam: {fileID: 1958194232}
   idNextRoom: 2
+  isLoked: 0
+  doorsSprites:
+  - {fileID: -1551842154, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: -1799675671, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
 --- !u!61 &1962264486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10125,6 +10164,8 @@ MonoBehaviour:
   exit: {fileID: 1054544860}
   PosCam: {fileID: 0}
   idNextRoom: 0
+  isLoked: 0
+  doorsSprites: []
 --- !u!61 &2121651839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10331,3 +10372,7 @@ MonoBehaviour:
   exit: {fileID: 1722141097}
   PosCam: {fileID: 46519264}
   idNextRoom: 1
+  isLoked: 1
+  doorsSprites:
+  - {fileID: -1324436540, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
+  - {fileID: -267874371, guid: 9aa7cc44144f48e419e07ee3bbdc777e, type: 3}
